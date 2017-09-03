@@ -206,6 +206,17 @@ printf("zerando a terceira coluna após a segunda linha\n");
 
 imprime(m1,m2,m3,m4);
 
+printf("Resolvendo o sistema temos que:\n");
 
+x4=(m4[4]/m4[3]);
+x3=(((m3[4])-(m3[3]*x4))/(m3[2]));
+x2=(((m2[4])-(m2[3]*x4)-(m2[2]*x3))/(m2[1]));
+x1=(((m1[4])-(m1[3]*x4)-(m1[2]*x3)-(m1[1]*x2))/(m1[0]));
+
+
+printf("x1 = %.1f \n ", x1);
+printf("x2 = %.1f \n ", x2);
+printf("x3 = %.1f \n ", x3);
+printf("x4 = %.1f \n ", x4);
 
 }
