@@ -78,5 +78,62 @@ float x1, x2, x3, x4;
 
 imprime(m1,m2,m3,m4);
 
+printf("triangularizando a matriz \n");
+
+if(m1[0]!=0)
+{
+		K=(m2[0]/m1[0]);
+
+		for(i=0; i<5; i++)
+			{
+				m2[i]=m2[i]-K*m1[i];
+			}
+}
+else
+{
+		for(i=0; i<5; i++)
+		{
+				ma[i]=m1[i];
+		}
+
+		for(i=0; i<5; i++)
+		{
+				m1[i]=m2[i];
+				m2[i]=ma[i];
+		}
+
+}
+
+if(m3[0]!=0)
+{
+		K=(m3[0]/m1[0]);
+
+		for(i=0; i<5; i++)
+			{
+				m3[i]=m3[i]-K*m1[i];
+			}
+}
+else
+{
+}
+
+if(m4[0]!=0)
+{
+		K=(m4[0]/m1[0]);
+
+		for(i=0; i<5; i++)
+			{
+				m4[i]=m4[i]-K*m1[i];
+			}
+}
+else
+{
+}
+
+
+printf("zerando a primeira coluna \n");
+
+imprime(m1,m2,m3,m4);
+
 
 }
