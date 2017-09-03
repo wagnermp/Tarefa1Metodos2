@@ -178,4 +178,34 @@ printf("zerando a segunda coluna a partir da segunda linha\n");
 imprime(m1,m2,m3,m4);
 
 
+if(m3[2]!=0)
+{
+		K=(m4[2]/m3[2]);
+
+		for(i=0; i<5; i++)
+			{
+				m4[i]=m4[i]-K*m3[i];
+			}
+}
+else
+{
+		for(i=0; i<5; i++)
+		{
+				ma[i]=m3[i];
+		}
+
+		for(i=0; i<5; i++)
+		{
+				m3[i]=m4[i];
+				m4[i]=ma[i];
+		}
+}
+
+
+printf("zerando a terceira coluna após a segunda linha\n");
+
+imprime(m1,m2,m3,m4);
+
+
+
 }
