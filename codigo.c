@@ -62,9 +62,6 @@ float x1, x2, x3, x4;
 
 			printf("\n");
 
-}
-
-			printf("\n");
 
 imprime(m1,m2,m3);
 
