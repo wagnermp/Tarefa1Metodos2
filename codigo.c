@@ -109,6 +109,8 @@ else
 
 }
 
+imprime(m1,m2,m3);
+
 printf("pivoteamento \n");
 
         if(m1[0]<m3[0])
