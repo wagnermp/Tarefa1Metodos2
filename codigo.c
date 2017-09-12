@@ -35,7 +35,7 @@ int i;
 float K;
 float x1, x2, x3, x4;
 
-	float m1[5], m2[5], m3[5], m4[5], ma[5];
+	float m1[5], m2[5], m3[5], m4[5], ma[5], ma1[5];
 
 
 		for(i=0; i<4; i++)
@@ -69,12 +69,27 @@ printf("triangularizando a matriz \n");
 
 if(m1[0]!=0)
 {
+		if(m1[0]<m2[0])
+		{
+			for(i=0; i<4; i++)
+			{
+			ma1[i]=m1[i];
+			m1[i]=m2[i];
+			m2[i]=ma1[i];
+			}
+		imprime(m1,m2,m3);
+
+		printf("\n");
+
+		}
+
 		K=(m2[0]/m1[0]);
 
 		for(i=0; i<4; i++)
 			{
 				m2[i]=m2[i]-K*m1[i];
 			}
+
 }
 else
 {
@@ -93,6 +108,33 @@ else
 
 if(m3[0]!=0)
 {
+		 if(m1[0]<m3[0])
+                {
+
+                        for(i=0; i<4; i++)
+                        {
+                        ma1[i]=m3[i];
+                        m3[i]=m1[i];
+                        m1[i]=ma1[i];
+                        }
+
+		imprime(m1,m2,m3);
+
+                printf("\n"); 
+
+                }
+
+
+                {
+                        for(i=0; i<4; i++)
+                        {
+                        ma1[i]=m2[i];
+                        m2[i]=m1[i];
+                        m1[i]=ma1[i];
+                        }
+                }
+
+
 		K=(m3[0]/m1[0]);
 
 		for(i=0; i<5; i++)
@@ -111,6 +153,22 @@ imprime(m1,m2,m3);
 
 if(m2[1]!=0)
 {
+	 if(m2[1]<m3[1])
+                {
+                        for(i=0; i<4; i++)
+                        {
+                        ma1[i]=m2[i];
+                        m2[i]=m3[i];
+                        m3[i]=ma1[i];
+                        }
+
+		imprime(m1,m2,m3);
+
+                printf("\n"); 
+
+                }
+
+
 		K=(m3[1]/m2[1]);
 
 		for(i=0; i<4; i++)
