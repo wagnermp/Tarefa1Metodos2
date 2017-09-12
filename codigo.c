@@ -65,23 +65,27 @@ float x1, x2, x3, x4;
 
 imprime(m1,m2,m3);
 
-printf("triangularizando a matriz \n");
+printf("Triangularização");
+printf("\n");
+
+printf("pivoteamento\n");
+printf("\n");
+
+        if(m1[0]<m2[0])
+        {
+                for(i=0; i<4; i++)
+                {
+                        ma1[i]=m1[i];
+                        m1[i]=m2[i];
+			m2[i]=ma1[i];
+		}
+	}
+
+imprime(m1,m2,m3);
+
 
 if(m1[0]!=0)
 {
-		if(m1[0]<m2[0])
-		{
-			for(i=0; i<4; i++)
-			{
-			ma1[i]=m1[i];
-			m1[i]=m2[i];
-			m2[i]=ma1[i];
-			}
-		imprime(m1,m2,m3);
-
-		printf("\n");
-
-		}
 
 		K=(m2[0]/m1[0]);
 
@@ -106,35 +110,22 @@ else
 
 }
 
+printf("pivoteamento \n");
+
+        if(m1[0]<m3[0])
+        {
+                for(i=0; i<4; i++)
+                {
+                        ma1[i]=m1[i];
+                        m1[i]=m3[i];
+                        m3[i]=ma1[i];
+                }
+        }
+
+imprime(m1,m2,m3);
+
 if(m3[0]!=0)
 {
-		 if(m1[0]<m3[0])
-                {
-
-                        for(i=0; i<4; i++)
-                        {
-                        ma1[i]=m3[i];
-                        m3[i]=m1[i];
-                        m1[i]=ma1[i];
-                        }
-
-		imprime(m1,m2,m3);
-
-                printf("\n"); 
-
-                }
-
-
-                {
-                        for(i=0; i<4; i++)
-                        {
-                        ma1[i]=m2[i];
-                        m2[i]=m1[i];
-                        m1[i]=ma1[i];
-                        }
-                }
-
-
 		K=(m3[0]/m1[0]);
 
 		for(i=0; i<5; i++)
@@ -150,24 +141,22 @@ else
 
 imprime(m1,m2,m3);
 
+printf("pivoteamento \n");
 
-if(m2[1]!=0)
-{
-	 if(m2[1]<m3[1])
+        if(m2[1]<m3[1])
+        {
+                for(i=0; i<4; i++)
                 {
-                        for(i=0; i<4; i++)
-                        {
                         ma1[i]=m2[i];
                         m2[i]=m3[i];
                         m3[i]=ma1[i];
-                        }
-
-		imprime(m1,m2,m3);
-
-                printf("\n"); 
-
                 }
+        }
 
+imprime(m1,m2,m3);
+
+if(m2[1]!=0)
+{
 
 		K=(m3[1]/m2[1]);
 
