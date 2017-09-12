@@ -65,8 +65,6 @@ float x1, x2, x3, x4;
 
 imprime(m1,m2,m3);
 
-printf("Triangularização");
-printf("\n");
 
 printf("pivoteamento\n");
 printf("\n");
@@ -83,6 +81,7 @@ printf("\n");
 
 imprime(m1,m2,m3);
 
+printf("triangularização \n");
 
 if(m1[0]!=0)
 {
@@ -124,6 +123,8 @@ printf("pivoteamento \n");
 
 imprime(m1,m2,m3);
 
+printf("triangularização 2 \n");
+
 if(m3[0]!=0)
 {
 		K=(m3[0]/m1[0]);
@@ -154,6 +155,8 @@ printf("pivoteamento \n");
         }
 
 imprime(m1,m2,m3);
+
+printf("triangularização 3 \n");
 
 if(m2[1]!=0)
 {
